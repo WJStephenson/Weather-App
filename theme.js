@@ -1,18 +1,17 @@
 const lightColors = [
-    `#f2f2f2`, `#fff`, `#f2f2f2`, `#333`
+    `#f2f2f2`, `#fff`, `#f2f2f2`, `#333`, `#2ecc71`
 ];
 const darkColors = [
-    `#2e2e2e`, `#4d4d4d`, `#2e2e2e`, `#f7f7f7`
+    `#2e2e2e`, `#0b0524`, `#38344c`, `#f8fef6`, `#8e93f0`
 ];
 const colorVariables = [
-    `--background-color`, `--body-background-color`, `--main-card-bg`, `--text-color`
+    `--background-color`, `--body-background-color`, `--main-card-bg`, `--text-color`, `--button-color`
 ];
 const button = document.getElementById('theme-button');
 const lightModeIcon = `<i class="fa-regular fa-sun"></i>`;
 const darkModeIcon = `<i class="fa-regular fa-moon"></i>`;
 
 button.addEventListener('click', () => {
-    console.log('clicked');
     setTheme();
 });
 
