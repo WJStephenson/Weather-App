@@ -1,9 +1,21 @@
+:root {
+  --background-color: #f2f2f2;
+  --body-background-color: #fff;
+  --main-card-bg: #fff;
+  --text-color: #333;
+}
+
+* {
+  transition: all 0.5s ease-in-out;
+}
+
 html {
   font-family: 'Roboto', sans-serif;
+  font-weight: 600;
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: var(--body-background-color);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -18,12 +30,13 @@ body {
 }
 
 input {
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 0.5rem;
   padding: 0.5rem;
   font-size: 1rem;
   outline: none;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1rem rgba(34, 33, 33, 0.2);
+  background-color: var(--main-card-bg);
 }
 
 button {
@@ -34,7 +47,11 @@ button {
   background-color: #2ecc71;
   cursor: pointer;
   outline: none;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1rem rgba(34, 33, 33, 0.2);
+}
+
+label, input, button, i, ::placeholder, input:focus {
+  color: var(--text-color);
 }
 
 button:hover {
@@ -46,14 +63,14 @@ button:active {
 }
 
 #weather-card {
-  max-width: 600px;
+  max-width: 700px;
   width: 85dvw;
   min-height: 1000px;
   margin: auto;
   margin-top: 1rem;
   border-radius: 1rem;
-  background-color: white;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  background-color: var(--main-card-bg);
+  box-shadow: 0 0 1rem rgba(34, 33, 33, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,11 +81,12 @@ button:active {
 .card {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4rem;
-  padding: 1rem;
-  background-color: whitesmoke;
+  background-color: var(--body-background-color);
   border-radius: 2rem;
   padding: 0 2rem;
+  max-width: 80%;
 }
 
 .city {
@@ -110,15 +128,17 @@ button:active {
 p {
   padding: 0;
   margin: 6px;
+  color: var(--text-color);
 }
 
 .fade-in {
   opacity: 0;
-  transition: opacity 2s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .fade-in.show {
   opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .switch-field {
@@ -136,8 +156,7 @@ p {
 }
 
 .switch-field label {
-  background-color: #e4e4e4;
-  color: rgba(0, 0, 0, 0.6);
+  background-color: var(--main-card-bg);
   font-size: 14px;
   line-height: 1;
   text-align: center;

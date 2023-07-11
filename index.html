@@ -2,29 +2,29 @@
 <html>
 
 <head>
-  <title>Geolocation</title>
+  <title>Weather App</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-
   <script src="https://kit.fontawesome.com/861319270c.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
   <div class="nav">
     <input type="text" id="search" placeholder="Search a location...">
     <button id="button">Search</button>
     <div class="switch-field">
-      <input type="radio" id="radio-one" name="switch-one" value="C" checked />
+      <input type="radio" id="radio-one" name="switch-one" value="C" checked/>
       <label for="radio-one">C</label>
       <input type="radio" id="radio-two" name="switch-one" value="F" />
       <label for="radio-two">F</label>
     </div>
+    <button id="theme-button"></button>
   </div>
   <div id="weather-card">
   </div>
   <script type="module" src="./index.js"></script>
+  <script type="module" src="./theme.js"></script>
 </body>
 
 </html>
